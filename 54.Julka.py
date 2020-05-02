@@ -1,4 +1,4 @@
-# Solution 1
+# Solution 1(This isn't accepted but I cannot find the error)
 
 for i in range(10):
     num = int(input())

@@ -13,3 +13,18 @@ while(cols != 0):
             
     print(ans)
 
+# Solution 2
+
+import numpy as np
+cols = int(input())
+
+while(cols != 0):
+
+    string = input()
+    arr = np.array(list(string))
+    print(arr.size)
+    arr = arr.reshape(int(len(string)/cols), cols)
+    arr[1::2, :] = arr[1::2, ::-1]
+    arr = arr.flatten('F')
+    listToStr = ''.join([str(elem) for elem in arr])
+    print(listToStr)
